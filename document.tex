@@ -1,0 +1,261 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{paracol}
+\usepackage{ctex}
+\usepackage{comment}
+
+% 字体设置
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}[AutoFakeBold]
+\renewcommand{\labelitemii}{$\circ$}
+
+% 在导言区添加
+\usepackage{titlesec}
+\titleformat{\section}[block]
+{\normalfont\Large\bfseries\raggedright} % 关键修改：\raggedright 实现左对齐
+{}{0pt}
+{}
+\titlespacing*{\section}
+{0pt}       % 左缩进
+{6pt plus 0pt minus 1pt} % 上间距
+{4pt plus 0pt minus 1pt} % 下间距
+
+% 紧凑列表设置
+\setlist[itemize]{nosep, leftmargin=*, topsep=2pt, partopsep=2pt}
+
+% 超链接样式
+\definecolor{linkblue}{rgb}{0.0,0.3,0.6}
+\hypersetup{
+	colorlinks=true,
+	urlcolor=linkblue,
+	linkcolor=linkblue,
+}
+
+% 在导言区添加
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+	% 个人信息分栏布局
+	\noindent
+	\begin{tabularx}{\textwidth}{@{} Y Y r @{}}
+		\multicolumn{2}{@{}X@{}}{\textbf{\LARGE 嵌入式Linux软件开发}} &
+		\raisebox{-2.5cm}[0pt][0pt]{\includegraphics[width=2.8cm,keepaspectratio]{photo.jpg}} \\
+		% 第一列信息
+		\begin{tabular}[t]{@{} l @{}}
+			\textcolor{black}{姓名：朱晓彬} \\
+			\textcolor{black}{性别：男} \\
+			\textcolor{black}{年龄：25岁} \\
+			\textcolor{black}{政治面貌：中共党员} \\
+		\end{tabular} &
+		% 第二列信息
+		\begin{tabular}[t]{@{} l @{}}
+			\textcolor{black}{籍贯：广东梅州} \\
+			\textcolor{black}{电话（微信）：(+86) 188-1376-9941} \\
+			\textcolor{black}{邮箱：\href{mailto:zzxiaobin09@qq.com}{\textcolor{linkblue}{zzxiaobin09@qq.com}}} \\
+			\textcolor{black}{GitHub：\href{https://github.com/Distance09}{\textcolor{linkblue}{github.com/Distance09}}}\\
+		\end{tabular} &
+	\end{tabularx}
+	
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	% 教育背景
+	\section*{\textnormal{\textbf{教育背景}}}
+	\begin{itemize}
+		\item \textbf{硕士：广东工业大学} \hfill 2023.09 -- 2026.06 \\
+		信息工程学院，新一代电子信息技术 \hfill GPA: 3.38/5.0\textbf{（Top 20\%）}
+		\item \textbf{本科：广州航海学院} \hfill 2019.09 -- 2023.06 \\
+		信息与通信工程学院，电子信息工程 \hfill GPA: 3.67/5.0\textbf{（Top10\%）}
+	\end{itemize}
+	
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+
+	% 技术能力
+	\section*{\textnormal{\textbf{技术能力}}}
+	
+	\begin{itemize}
+		\item 具有ARM Cortex-A系列开发（I.MX6U、X5M、MR813）和Uboot/Kernel移植经验。
+		\item 熟悉Linux操作环境和基本驱动开发（字符设备/Platform框架/设备树）。
+		\item 熟悉Linux应用开发（多线程/网络（Socket）编程/进程间通信）和基础QT开发。
+		%\item 掌握Busybox/Buildroot构建轻量化根文件系统，利用NFS和TFTP服务构建网络开发环境。
+		\item 掌握UART、I2C、SPI等通信协议，TCP/IP网络协议、MQTT物联网协议和蓝牙（BLE）协议栈。
+		\item 熟练使用交叉编译工具链，掌握GDB，Valgrind，ADB等工具，以及CMake和Shell脚本编写。
+		\item 熟悉Git版本控制、Jenkins和JFrog持续集成部署管理、APM程序监控等DevOps工具链。
+		\item 掌握使用逻辑分析仪，示波器等工具，熟悉jira、confluence等团队协作软件。
+		\item 编程语言：C/C++（熟练）、Matlab（熟练）、Python（了解）、汇编（了解）。
+	\end{itemize}
+	
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	% 实习经历
+	\section*{\textnormal{\textbf{实习经历}}}
+	\begin{itemize}
+	\item \textbf{云鲸智能创新（深圳）有限公司} \hfill {\textbf{嵌入式软件（无线方向）}} \hfill {2025.05-2025.08}
+		
+	核心职责：负责云鲸智能扫地机器人产品线中无线通信模块（WiFi和BLE）的嵌入式软件开发、维护、测试及优化工作。
+		
+	功能开发：BLE配对全过程以及无线模块崩溃自恢复全过程的埋点方案实现，根据产品业务要求进行机型判断，优化现有逻辑，执行不同的无线通信任务。
+		
+	实习成果：实现BLE配对和无线模块崩溃自恢复的埋点方案，将追踪的埋点数据制作成为BI看板，对无线模块相关功能代码进行完善，debug以及逻辑优化。
+	
+	\item \textbf{纵维立方科技有限公司} \hfill {\textbf{Linux应用工程师}} \hfill 2026.03-至今
+
+	负责3D打印机嵌入式Linux系统UI开发，基于LVGL图形库实现设备操作界面。
+	基于LVGL图形库开发3D打印机控制界面，包括设备状态显示、参数设置及打印控制界面。
+	参与UI界面组件封装及页面逻辑实现，提升界面交互体验。
+	与底层设备控制模块进行接口对接，实现打印状态、温度等信息的实时显示。
+		
+	系统调试：
+	在嵌入式Linux环境下完成UI程序编译、调试与运行。
+	配合硬件及底层软件团队进行功能联调，定位界面显示及交互问题。
+		
+	技术栈：
+	LVGL / C / Embedded Linux / Framebuffer / CMake
+	
+	\item \textbf{广州视源电子科技股份有限公司} \hfill {\textbf{嵌入式系统软件（体验实习）}} \hfill {2025.11-2025.11}
+
+	主要内容：
+	参与视频核心板环境光传感器驱动开发任务，了解嵌入式Linux驱动开发流程。
+	
+	实践内容：
+	阅读Linux设备驱动框架及平台驱动代码，理解设备树与驱动匹配机制。
+	编写环境光传感器基础驱动代码，实现设备节点注册及用户态数据读取接口。
+	通过I2C接口读取传感器数据，并在用户空间进行测试验证。
+	
+	收获：
+	熟悉Linux驱动开发基本流程及调试方法
+	加深对I2C设备驱动开发流程的理解
+	\end{itemize}
+
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	% 项目经历
+	\section*{\textnormal{\textbf{项目经历}}}
+	\begin{itemize}
+		\item \textbf{扫地机器人无线模块（WiFi和BLE）的开发（低功耗蓝牙BLE协议栈）} \hfill 2025.05-2025.08
+		\begin{itemize}
+			\item 基于SunriseX5M和MR813主控芯片，对AIC8800或REALTEK8189和TLSR8258进行业务层的功能开发和维护，主要方向为BLE。
+			\item 对扫地机产品的自动/手动配对过程，以及无线模块崩溃自恢复过程实现埋点方案，收集报错信息以及失败原因，方便后续调整优化配对逻辑，完成数据追踪。
+			\item 根据产品业务要求，对公司内部使用的自有协议进行相应的功能开发，对不同机型进行识别，执行相应的无线通信任务。
+		\end{itemize}
+	
+		\item \textbf{基于I.MX6U的智能家居物联网系统（驱动开发、MQTT协议）} \hfill 2023.02-2023.06
+		\begin{itemize}
+			\item 基于I.MX6U移植Linux4.1内核进行开发，基于EMQX搭建MQTT Broker服务器，使用Busybox/Buildroot构建根文件系统。
+			\item 完成触摸屏（FT5426）、环境传感器（AP3216C）、六轴传感器（ICM-20608）等多个外设驱动开发，通过设备树描述硬件资源，实现设备节点供应用层调用。
+			\item 实现功能：图片显示，音乐播放，上传环境数据到MQTT服务器，通过MQTT.fx远程控制设备。
+		\end{itemize}
+		
+		\item \textbf{基于QT的聊天平台开发（QT开发、网络编程、多线程编程）} \hfill 2025.03-2025.05
+		\begin{itemize}
+			\item 基于QT开发聊天平台GUI界面，采用观察者模式实现群消息和朋友圈实时推送。
+			\item 服务端实现多线程并发处理，临时存储用户未接收消息，使用SQLite存储用户列表及聊天记录。
+			\item 实现功能：聊天平台登录/注册、好友添加/删除、群聊以及朋友圈管理、文本消息实时传输、在线状态同步。
+		\end{itemize}
+		
+	\end{itemize}
+
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	\section*{\textnormal{\textbf{科研经历}}}
+	\begin{itemize}
+		\item \textbf{LoRa调制解调算法优化（研究生课题）} \hfill 2023.09-至今
+		\begin{itemize}
+			\item 提出基于ZC序列的多啁啾率索引调制系统，使用MATLAB搭建仿真平台，相较于FSCSS-IM系统传输速率提升了35\%。
+			\item 提出基于峰值检测的连续干扰抵消(PD-SIC)算法，在多用户传输情况下，BER达到${10^{-5}}$，相较于OrthoRa系统吞吐量提升21\%。
+		\end{itemize}
+	\end{itemize}
+	
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	\section*{\textnormal{\textbf{研究成果}}}
+	\begin{itemize}
+		\item \textbf{期刊论文}：Design of A New Multiple-Chirp-Rate Index Modulation for LoRa Networks.（\textbf{SIC二区顶刊，已发表}）
+		\item \textbf{发明专利}：一种基于ZC序列的多啁啾率索引调制方法与系统（2025102697352，\textbf{已授权}）。
+
+	\end{itemize}
+	
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	% 荣誉奖项
+	\section*{\textnormal{\textbf{荣誉奖项}}}
+	\begin{itemize}
+		\begin{minipage}[t]{0.45\textwidth}
+			\item 学业一等奖学金 \hfill 2025.09
+			\item 校三好学生(特等奖学金，\textbf{TOP2\%})   \hfill 2020.12
+			\item 学业二等奖学金 \hfill 2024.09
+			\item 研究生社会实践菁英奖学金(2025) \hfill 2025.09
+			\item 研究生社会实践菁英奖学金(2024) \hfill 2024.09
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\item 研究生新生奖学金 \hfill 2023.11
+			\item 研究生文体活动菁英奖学金(2025) \hfill 2025.09
+			\item 研究生文体活动菁英奖学金(2024) \hfill 2024.09
+			\item CET4（484分） \hfill 2024.06
+		\end{minipage}
+	\end{itemize}
+
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	% 校园经历
+	\section*{\textnormal{\textbf{校园经历}}}
+	\begin{itemize}
+		\item 担任党支部组织委员~~~~~~~~~~~~~~~~~~~~~负责协助和组织党支部活动 \hfill 2024.09 - 2025.09
+		\item 担任班级宣传委员~~~~~~~~~~~~~~~~~~~~~~~~~负责班级的安全宣传工作 \hfill 2023.09 - 至今
+		\item 担任学院党政办助管~~~~~~~~~~~~~~~~~~~~~负责协助学院举办各种活动 \hfill 2023.09 - 2024.12
+	\end{itemize}
+	
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	% 自我评价
+	\section*{\textnormal{\textbf{自我评价}}}
+	\begin{itemize}
+		\item 拥有较强的学习能力和独立解决问题的能力，能够快速掌握技术并应用到实际项目中。
+		\item 热爱生活，工作认真负责，能够与团队成员有效沟通，拥有不错的抗压能力。
+		\item 对新技术抱有探索欲望，致力于不断提升自己的技术水平。
+	\end{itemize}
+
+	% 分隔线
+	\vspace{1mm}
+	\hrule height 1pt
+	\vspace{1mm}
+	
+	\vfill
+	\centering
+	% \small 更新日期：\today
+\end{document}
