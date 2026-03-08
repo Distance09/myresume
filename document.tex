@@ -87,13 +87,13 @@
 	\begin{itemize}
 		\item 具有ARM Cortex-A系列开发（I.MX6U、X5M、MR813）和Uboot/Kernel移植经验。
 		\item 熟悉Linux操作环境和基本驱动开发（字符设备/Platform框架/设备树）。
-		\item 熟悉Linux应用开发（多线程/网络（Socket）编程/进程间通信）和基础QT开发。
+		\item 熟悉Linux应用开发（多线程/网络（Socket）编程/进程间通信），QT开发和LVGL。
 		%\item 掌握Busybox/Buildroot构建轻量化根文件系统，利用NFS和TFTP服务构建网络开发环境。
 		\item 掌握UART、I2C、SPI等通信协议，TCP/IP网络协议、MQTT物联网协议和蓝牙（BLE）协议栈。
 		\item 熟练使用交叉编译工具链，掌握GDB，Valgrind，ADB等工具，以及CMake和Shell脚本编写。
 		\item 熟悉Git版本控制、Jenkins和JFrog持续集成部署管理、APM程序监控等DevOps工具链。
 		\item 掌握使用逻辑分析仪，示波器等工具，熟悉jira、confluence等团队协作软件。
-		\item 编程语言：C/C++（熟练）、Matlab（熟练）、Python（基础）、汇编（基础）。
+		\item 编程语言：C（熟练）、C++（熟练）、Matlab（熟练）、Python（基础）、汇编（基础）。
 	\end{itemize}
 	
 	% 分隔线
@@ -104,30 +104,31 @@
 	% 实习经历
 	\section*{\textnormal{\textbf{实习经历}}}
 	\begin{itemize}
-	\item \textbf{云鲸智能创新（深圳）有限公司} \hfill {\textbf{嵌入式软件（无线方向）}} \hfill {2025.05-2025.08}
 		
-	核心职责：负责\textbf{扫地机器人}无线通信模块（WiFi和BLE）的嵌入式软件开发、维护、测试及优化工作。
+		\item \textbf{纵维立方科技有限公司} \hfill {\textbf{Linux应用工程师}} \hfill 2026.03 -- 至今
 		
-	实践内容：深入学习低功耗蓝牙BLE的协议栈，从物理层到应用层，包括GAP、GATT等。
-	理解BLE连接配对逻辑过程，涉及的性能指标等。
-	完成扫地机器人和基站之间BLE配对过程的数据收集，逻辑优化，功能开发，消除bug，代码review等内容。
+		核心职责：负责\textbf{3D打印机}嵌入式Linux系统UI开发，基于LVGL库设计并实现设备操作界面。
+		
+		实践内容：深入学习LVGL库，使用flex布局，重写3D打印机的UI界面，包括状态显示、参数设置、打印控制等模块。
+		实现UI组件封装，界面切换逻辑代码和事件回调。
+		配合团队完成接口对接与联调，确保实时数据显示和界面交互的稳定性。
+		
+		\item \textbf{云鲸智能创新（深圳）有限公司} \hfill {\textbf{嵌入式软件（无线方向）}} \hfill {2025.05 -- 2025.08}
+			
+		核心职责：负责\textbf{扫地机器人}无线通信模块（WiFi和BLE）的嵌入式软件开发、维护、测试及优化工作。
+			
+		实践内容：深入学习低功耗蓝牙BLE的协议栈，从物理层到应用层，包括GAP、GATT等。
+		理解BLE连接配对逻辑过程，涉及的性能指标等。
+		完成扫地机器人和基站之间BLE配对过程的数据收集，逻辑优化，功能开发，消除bug，代码review等内容。
 	
-	\item \textbf{纵维立方科技有限公司} \hfill {\textbf{Linux应用工程师}} \hfill 2026.03-至今
-
-	核心职责：负责\textbf{3D打印机}嵌入式Linux系统UI开发，基于LVGL库设计并实现设备操作界面。
+		\item \textbf{广州视源电子科技股份有限公司} \hfill {\textbf{嵌入式系统软件（体验实习）}} \hfill {2025.11 -- 2025.11}
 	
-	实践内容：深入学习LVGL库，使用flex布局，重写3D打印机的UI界面，包括状态显示、参数设置、打印控制等模块。
-	实现UI组件封装，界面切换逻辑代码和事件回调。
-	配合团队完成接口对接与联调，确保实时数据显示和界面交互的稳定性。
-	
-	\item \textbf{广州视源电子科技股份有限公司} \hfill {\textbf{嵌入式系统软件（体验实习）}} \hfill {2025.11-2025.11}
-
-	核心职责：参与\textbf{视频核心板}中环境光传感器的驱动开发任务，学习嵌入式Linux驱动开发流程。
-	
-	实践内容：阅读Linux设备驱动框架及平台驱动代码，理解设备树与驱动匹配机制。
-	编写环境光传感器基础驱动代码，实现设备节点注册及用户态数据读取接口。
-	通过I2C接口读取传感器数据，并在用户空间进行测试验证。
-	熟悉Linux驱动开发基本流程及调试方法，加深设备驱动开发的理解。
+		核心职责：参与\textbf{视频核心板}中环境光传感器的驱动开发任务，学习嵌入式Linux驱动开发流程。
+		
+		实践内容：阅读Linux设备驱动框架及平台驱动代码，理解设备树与驱动匹配机制。
+		编写环境光传感器基础驱动代码，实现设备节点注册及用户态数据读取接口。
+		通过I2C接口读取传感器数据，并在用户空间进行测试验证。
+		熟悉Linux驱动开发基本流程及调试方法，加深设备驱动开发的理解。
 	\end{itemize}
 
 	% 分隔线
@@ -138,28 +139,28 @@
 	% 项目经历
 	\section*{\textnormal{\textbf{项目经历}}}
 	\begin{itemize}
-		\item \textbf{3D打印机嵌入式UI系统的开发（LVGL库）} \hfill 2026.03-至今
+		\item \textbf{3D打印机嵌入式UI系统的开发（LVGL库、UI开发）} \hfill 2026.03 -- 至今
 		\begin{itemize}
 			\item 项目概述：为3D打印机嵌入式Linux平台设计并实现基于LVGL图形库的人机交互界面，提供设备状态监控、打印任务控制、参数设置等核心功能。
-			\item 在Linux Framebuffer上构建UI，通过CMake组织项目，实现模块化组件封装。设计并实现主控界面、打印详情、文件选择、WiFi配置等多个页面，利用LVGL的动画和样式机制提升用户体验。
-			\item 通过共享内存和Socket与底层设备控制模块通信，实时同步打印进度、喷头温度、热床温度等数据。
+			\item 使用flex布局构建UI，通过CMake组织项目，实现模块化组件封装。设计并实现主控界面、打印详情、文件选择、WiFi配置等多个页面，利用LVGL的动画和样式机制提升用户体验。
+			\item 通过进程间通信与底层设备控制模块通信，实时同步打印进度、喷头温度、热床温度等数据。
 		\end{itemize}
 		
-		\item \textbf{扫地机器人无线模块（WiFi和BLE）的开发（低功耗蓝牙BLE协议栈）} \hfill 2025.05-2025.08
+		\item \textbf{扫地机器人无线模块（WiFi和BLE）的开发（低功耗蓝牙BLE协议栈）} \hfill 2025.05 -- 2025.08
 		\begin{itemize}
 			\item 基于SunriseX5M和MR813主控芯片，对AIC8800或REALTEK8189和TLSR8258进行业务层的功能开发和维护，主要方向为BLE。
 			\item 对扫地机产品的自动/手动配对过程，以及无线模块崩溃自恢复过程实现埋点方案，收集报错信息以及失败原因，方便后续调整优化配对逻辑，完成数据追踪。
 			\item 根据产品业务要求，对公司内部使用的自有协议进行相应的功能开发，对不同机型进行识别，执行相应的无线通信任务。
 		\end{itemize}
 	
-		\item \textbf{基于I.MX6U的智能家居物联网系统（驱动开发、MQTT协议）} \hfill 2023.02-2023.06
+		\item \textbf{基于I.MX6U的智能家居物联网系统（驱动开发、MQTT协议）} \hfill 2023.02 -- 2023.06
 		\begin{itemize}
 			\item 基于I.MX6U移植Linux4.1内核进行开发，基于EMQX搭建MQTT Broker服务器，使用Busybox/Buildroot构建根文件系统。
 			\item 完成触摸屏（FT5426）、环境传感器（AP3216C）、六轴传感器（ICM-20608）等多个外设驱动开发，通过设备树描述硬件资源，实现设备节点供应用层调用。
 			\item 实现功能：图片显示，音乐播放，上传环境数据到MQTT服务器，通过MQTT.fx远程控制设备。
 		\end{itemize}
 		
-		\item \textbf{基于QT的聊天平台开发（QT开发、网络编程、多线程编程）} \hfill 2025.03-2025.05
+		\item \textbf{基于QT的聊天平台开发（QT开发、网络编程、多线程编程）} \hfill 2025.03 -- 2025.05
 		\begin{itemize}
 			\item 基于QT开发聊天平台GUI界面，采用观察者模式实现群消息和朋友圈实时推送。
 			\item 服务端实现多线程并发处理，临时存储用户未接收消息，使用SQLite存储用户列表及聊天记录。
@@ -189,9 +190,9 @@
 	\vspace{1mm}
 	\end{comment}
 	
-	\section*{\textnormal{\textbf{研究成果}}}
+	\section*{\textnormal{\textbf{科研成果}}}
 	\begin{itemize}
-		\item \textbf{期刊论文}：Design of A New Multiple-Chirp-Rate Index Modulation for LoRa Networks.（\textbf{SIC二区顶刊，已发表}）
+		\item \textbf{期刊论文}：Design of A New Multiple-Chirp-Rate Index Modulation for LoRa Networks.（\textbf{SCI二区顶刊，已发表}）
 		\item \textbf{发明专利}：一种基于ZC序列的多啁啾率索引调制方法与系统（2025102697352，\textbf{已授权}）。
 
 	\end{itemize}
