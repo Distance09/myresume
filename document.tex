@@ -46,7 +46,7 @@
 	% 个人信息分栏布局
 	\noindent
 	\begin{tabularx}{\textwidth}{@{} Y Y r @{}}
-		\multicolumn{2}{@{}X@{}}{\textbf{\LARGE 嵌入式Linux软件开发}} &
+		\multicolumn{2}{@{}X@{}}{\textbf{\LARGE 系统工程师}} &
 		\raisebox{-2.1cm}[0pt][0pt]{\includegraphics[width=2.8cm,keepaspectratio]{photo.jpg}} \\
 		% 第一列信息
 		\begin{tabular}[t]{@{} l @{}}
@@ -85,14 +85,14 @@
 	\section*{\textnormal{\textbf{技术能力}}}
 	
 	\begin{itemize}
-		\item 具有ARM Cortex-A系列开发（I.MX6U、X5M、MR813）和Uboot/Kernel移植经验。
+		\item 具有ARM架构Cortex-A系列开发（I.MX6U、X5M、MR813）和Uboot/Kernel移植经验。
 		\item 熟悉Linux操作环境和基本驱动开发（字符设备/Platform框架/设备树）。
 		\item 熟悉Linux应用开发（多线程/网络（Socket）编程/进程间通信），QT开发和LVGL。
 		%\item 掌握Busybox/Buildroot构建轻量化根文件系统，利用NFS和TFTP服务构建网络开发环境。
 		\item 掌握UART、I2C、SPI等通信协议，TCP/IP网络协议、MQTT物联网协议和蓝牙（BLE）协议栈。
 		\item 熟练使用交叉编译工具链，掌握GDB，Valgrind，ADB等工具，以及CMake和Shell脚本编写。
-		\item 熟悉Git版本控制、Jenkins和JFrog持续集成部署管理、APM程序监控等DevOps工具链。
-		\item 掌握使用逻辑分析仪，示波器等工具，熟悉jira、confluence等团队协作软件。
+		\item 熟悉Git版本控制，Docker，Gerrit，Jenkins和JFrog持续集成部署管理、APM程序监控等DevOps工具链。
+		\item 掌握使用逻辑分析仪，示波器等工具，能看懂原理图，会基础的PCB。
 		\item 编程语言：C（熟练）、C++（熟练）、Matlab（熟练）、Python（基础）、汇编（基础）。
 	\end{itemize}
 	
@@ -120,7 +120,8 @@
 		实践内容：深入学习低功耗蓝牙BLE的协议栈，从物理层到应用层，包括GAP、GATT等。
 		理解BLE连接配对逻辑过程，涉及的性能指标等。
 		完成扫地机器人和基站之间BLE配对过程的数据收集，逻辑优化，功能开发，消除bug，代码review等内容。
-	
+		
+		\begin{comment}
 		\item \textbf{广州视源电子科技股份有限公司} \hfill {\textbf{嵌入式系统软件（体验实习）}} \hfill {2025.11 -- 2025.11}
 	
 		核心职责：参与\textbf{视频核心板}中环境光传感器的驱动开发任务，学习嵌入式Linux驱动开发流程。
@@ -129,6 +130,7 @@
 		编写环境光传感器基础驱动代码，实现设备节点注册及用户态数据读取接口。
 		通过I2C接口读取传感器数据，并在用户空间进行测试验证。
 		熟悉Linux驱动开发基本流程及调试方法，加深设备驱动开发的理解。
+		\end{comment}
 	\end{itemize}
 
 	% 分隔线
@@ -149,21 +151,21 @@
 		\item \textbf{扫地机器人无线模块（WiFi和BLE）的开发（低功耗蓝牙BLE协议栈）} \hfill 2025.05 -- 2025.08
 		\begin{itemize}
 			\item 基于SunriseX5M和MR813主控芯片，对AIC8800或REALTEK8189和TLSR8258进行业务层的功能开发和维护，主要方向为BLE。
-			\item 对扫地机产品的自动/手动配对过程，以及无线模块崩溃自恢复过程实现埋点方案，收集报错信息以及失败原因，方便后续调整优化配对逻辑，完成数据追踪。
-			\item 根据产品业务要求，对公司内部使用的自有协议进行相应的功能开发，对不同机型进行识别，执行相应的无线通信任务。
+			\item 对扫地机器人的BLE配对过程进行追踪，编写回调函数实现埋点方案收集配对和报错数据，分析失败原因，方便后续调整优化配对逻辑。
+			\item 根据产品业务要求，对BLE配对流程进行功能开发，识别新机型并执行相应的无线通信任务。
 		\end{itemize}
 	
 		\item \textbf{基于I.MX6U的智能家居物联网系统（驱动开发、MQTT协议）} \hfill 2023.02 -- 2023.06
 		\begin{itemize}
 			\item 基于I.MX6U移植Linux4.1内核进行开发，基于EMQX搭建MQTT Broker服务器，使用Busybox/Buildroot构建根文件系统。
-			\item 完成触摸屏（FT5426）、环境传感器（AP3216C）、六轴传感器（ICM-20608）等多个外设驱动开发，通过设备树描述硬件资源，实现设备节点供应用层调用。
-			\item 实现功能：图片显示，音乐播放，上传环境数据到MQTT服务器，通过MQTT.fx远程控制设备。
+			\item 完成触摸屏（FT5426）、环境传感器（AP3216C）、六轴传感器（ICM-20608）等多个外设的驱动开发，与设备树进行匹配，实现设备节点供应用层调用。
+			\item 实现图片显示，音乐播放等功能，上传环境数据到MQTT服务器，通过MQTT.fx远程控制设备。
 		\end{itemize}
 		
 		\item \textbf{基于QT的聊天平台开发（QT开发、网络编程、多线程编程）} \hfill 2025.03 -- 2025.05
 		\begin{itemize}
 			\item 基于QT开发聊天平台GUI界面，采用观察者模式实现群消息和朋友圈实时推送。
-			\item 服务端实现多线程并发处理，临时存储用户未接收消息，使用SQLite存储用户列表及聊天记录。
+			\item 服务端实现多线程并发处理（epoll，线程池），使用动态链表存储用户未接收消息，使用SQLite存储用户列表及聊天记录。
 			\item 实现功能：聊天平台登录/注册、好友添加/删除、群聊以及朋友圈管理、文本消息实时传输、在线状态同步。
 		\end{itemize}
 		
@@ -255,11 +257,8 @@
 
 	% 自我评价
 	\section*{\textnormal{\textbf{自我评价}}}
-	\begin{itemize}
-		\item 拥有较强的学习能力和独立解决问题的能力，能够快速掌握技术并应用到实际项目中。
-		\item 热爱生活，工作认真负责，能够与团队成员有效沟通，拥有不错的抗压能力。
-		\item 对新技术抱有探索欲望，致力于不断提升自己的技术水平。
-	\end{itemize}
+	\noindent
+	拥有较强的学习能力和独立解决问题的能力，能够快速掌握技术并应用到实际项目中，能够快速融入团队形成实际生产力。热爱生活，工作认真负责，抗压能力强。关注行业发展趋势，持续探索新技术，致力于不断提升自己的技术水平。
 		
 	\vfill
 	\centering
